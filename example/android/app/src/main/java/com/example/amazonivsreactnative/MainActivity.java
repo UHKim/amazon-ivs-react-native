@@ -1,4 +1,4 @@
-package com.example.amazonivsreactnative;
+package com.example.amazonaws.ivs.reactnative.player;
 
 import android.os.Bundle;
 import android.view.WindowManager;

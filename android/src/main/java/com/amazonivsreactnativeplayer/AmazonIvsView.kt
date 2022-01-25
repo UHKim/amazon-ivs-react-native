@@ -1,4 +1,4 @@
-package com.amazonivsreactnative
+package ccom.amazonaws.ivs.reactnative.player
 
 import android.net.Uri
 import android.widget.FrameLayout

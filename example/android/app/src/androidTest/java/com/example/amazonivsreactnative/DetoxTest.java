@@ -1,4 +1,4 @@
-package com.example.amazonivsreactnative;
+package com.example.amazonaws.ivs.reactnative.player;
 
 import com.wix.detox.Detox;
 
