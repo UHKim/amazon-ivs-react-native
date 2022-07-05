@@ -39,6 +39,7 @@ type IVSPlayerProps = {
   quality?: Quality | null;
   autoMaxQuality?: Quality | null;
   autoQualityMode?: boolean;
+  backgroundAudio?: boolean;
   breakpoints?: number[];
   maxBitrate?: number;
   initialBufferDuration?: number;
@@ -89,6 +90,7 @@ type Props = {
   quality?: Quality | null;
   autoMaxQuality?: Quality | null;
   autoQualityMode?: boolean;
+  backgroundAudio?: boolean;
   breakpoints?: number[];
   maxBitrate?: number;
   initialBufferDuration?: number;
@@ -134,6 +136,7 @@ const IVSPlayerContainer = React.forwardRef<IVSPlayerRef, Props>(
       quality,
       autoMaxQuality,
       autoQualityMode,
+      backgroundAudio,
       breakpoints = [],
       maxBitrate,
       initialBufferDuration,
@@ -321,6 +324,7 @@ const IVSPlayerContainer = React.forwardRef<IVSPlayerRef, Props>(
           logLevel={logLevel}
           resizeMode={resizeMode}
           progressInterval={progressInterval}
+          backgroundAudio={backgroundAudio}
           volume={volume}
           quality={quality}
           initialBufferDuration={initialBufferDuration}

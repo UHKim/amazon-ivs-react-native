@@ -109,6 +109,11 @@ class AmazonIvsViewManager : SimpleViewManager<AmazonIvsView>() {
     view.setInitialBufferDuration(duration)
   }
 
+  @ReactProp(name = "backgroundAudio")
+  fun setBackgroundAudio(view: AmazonIvsView, backgroundAudio: Boolean) {
+    view.backgroundAudio = backgroundAudio
+  }
+
   override fun createViewInstance(reactContext: ThemedReactContext): AmazonIvsView {
     return AmazonIvsView(reactContext)
   }

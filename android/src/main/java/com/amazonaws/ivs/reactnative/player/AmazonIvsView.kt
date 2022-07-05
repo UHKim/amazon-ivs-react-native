@@ -24,6 +24,7 @@ class AmazonIvsView(private val context: ThemedReactContext) : FrameLayout(conte
   private var lastBitrate: Long? = null
   private var lastDuration: Long? = null
   private var finishedLoading: Boolean = false
+  var backgroundAudio: Boolean = true
 
   enum class Events(private val mName: String) {
     STATE_CHANGED("onPlayerStateChange"),
@@ -412,9 +413,15 @@ class AmazonIvsView(private val context: ThemedReactContext) : FrameLayout(conte
   }
 
   override fun onHostResume() {
+    if (!backgroundAudio) {
+      play()
+    }
   }
 
   override fun onHostPause() {
+    if (!backgroundAudio) {
+      pause()
+    }
   }
 
   override fun onHostDestroy() {
