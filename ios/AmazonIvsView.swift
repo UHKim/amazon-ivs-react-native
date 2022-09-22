@@ -57,6 +57,13 @@ class AmazonIvsView: UIView, IVSPlayer.Delegate {
         self.addTimePointObserver()
         self.addApplicationLifecycleObservers()
 
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback, options: .defaultToSpeaker)
+        } catch {
+           print("Error configuring AVAudioSession")
+        }
+
         player.delegate = self
         self.playerView.player = player
     }
