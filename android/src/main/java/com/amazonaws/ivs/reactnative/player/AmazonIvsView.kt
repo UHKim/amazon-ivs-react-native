@@ -17,6 +17,7 @@ import kotlin.concurrent.timerTask
 import android.app.PictureInPictureParams
 import android.app.Activity
 import androidx.annotation.RequiresApi
+import kotlin.math.pow
 
 
 class AmazonIvsView(private val context: ThemedReactContext) : FrameLayout(context), LifecycleEventListener {
@@ -285,8 +286,8 @@ class AmazonIvsView(private val context: ThemedReactContext) : FrameLayout(conte
     player?.pause()
   }
 
-  fun seekTo(position: Long) {
-    player?.seekTo(TimeUnit.SECONDS.toMillis(position))
+  fun seekTo(position: Double) {
+    player?.seekTo((position * TimeUnit.SECONDS.toMillis(1)).toLong())
   }
 
 
