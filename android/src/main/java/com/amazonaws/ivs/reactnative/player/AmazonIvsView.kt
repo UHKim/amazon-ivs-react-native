@@ -17,7 +17,6 @@ import kotlin.concurrent.timerTask
 import android.app.PictureInPictureParams
 import android.app.Activity
 import androidx.annotation.RequiresApi
-import kotlin.math.pow
 
 
 class AmazonIvsView(private val context: ThemedReactContext) : FrameLayout(context), LifecycleEventListener {
